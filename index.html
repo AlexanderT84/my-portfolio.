@@ -70,4 +70,129 @@
         h2 {
             font-size: 1.5rem;
             color: var(--accent);
-            margin-bottom: 1
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: ">";
+            font-weight: bold;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: #1f2937;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <span class="badge">Cyber Security Student</span>
+            <h1>Alexander Taut</h1>
+            <p class="subtitle">B.Sc. Cyber Security | Network Security | Ethical Hacking & Systems</p>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="card">
+                <p>Willkommen auf meinem Portfolio! Ich studiere Cyber Security und beschäftige mich intensiv mit Netzwerksicherheit, Systemhärtung und der Entwicklung sicherer Software. Hier dokumentiere ich meine Projekte, Labs und Write-ups.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Fokus & Skills</h2>
+            <ul class="skills-list">
+                <li>Linux / Bash</li>
+                <li>Python Security Scripts</li>
+                <li>Network Analysis (Wireshark)</li>
+                <li>Pentesting Fundamentals</li>
+                <li>Git & GitHub Actions</li>
+                <li>Docker</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projekte & Write-ups</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Lab Environment Setup</h3>
+                    <p>Aufbau einer isolierten VirtualBox-Umgebung für Security-Analysen und Penetration Testing Demos.</p>
+                </div>
+                <div class="card">
+                    <h3>Python Network Scanner</h3>
+                    <p>Ein einfaches Command-Line-Skript zur Erkennung aktiver Hosts und offener Ports im lokalen Netzwerk.</p>
+                </div>
+                <div class="card">
+                    <h3>CTF Write-ups</h3>
+                    <p>Dokumentation von gelösten Challenges aus Plattformen wie TryHackMe und Hack The Box.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Alexander Taut | Domain: <a href="https://alexander-taut.dev">alexander-taut.dev</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
